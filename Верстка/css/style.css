@@ -1,0 +1,110 @@
+main {
+            margin-top: 3rem;
+        }
+        
+        main .card {
+            margin-bottom: 2rem;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .read-more {
+                text-align: center;
+            }
+        }
+        
+        .navbar {
+            background-color: #0f6256;
+        }
+        
+        footer.page-footer {
+            background-color: #0f6256;
+            margin-top: 2rem;
+        }
+        .jumbotron {
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .fa-5x {
+            color: #0f6256;
+            opacity: 0.9;
+        }
+         .mbottom {
+             margin-bottom: -1rem;
+         }
+        #mainContainer {
+            margin-top: 6rem;
+        }
+        .carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
+            width:70px;
+            height:70px;
+        }
+       #rounded {            
+            border-radius: 50%;
+        }
+        .reply-form {
+            background-color: #5EB1A5;
+            border-radius: 20%;            
+        }
+        .fa-3x {
+            color: #15489F;
+        }
+        .contact-icons li {
+            list-style-type: none;
+        }
+        .articles-container {
+            margin-top: 7rem;
+        }
+        .tiles-margins {
+            margin-bottom: 1rem;
+        } 
+        .tiles-blog .tiles-margins .tiles-blog-post .tiles-image:after {
+            display: block;
+            position: relative;
+            margin-top: -300px;
+            content: '';
+            height: 300px;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)) repeat-x;
+        }
+        .tiles-blog .tiles-margins .tiles-blog-post .tiles-post-body {
+            position: absolute !important;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0 30px 22px;
+        }
+        .section-blog-fw .view img {
+            border-radius: 2px;
+        }
+        .card.card-cascade.wider.reverse .card-body {
+            z-index: 3;
+            margin-top: -12rem;
+            border-radius: 4px;
+        }
+        .btn-floating, .btn:active, .btn:focus, .btn:hover, .card.card-cascade.card-avatar img, .card.card-cascade.wider.reverse .card-body, .colorful-select .dropdown-content li.active span, .comments-list .badge, .dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover, .md-pills .nav-link.active:hover, .media .media-left img, .modal-dialog .modal-content, .modal-dialog.cascading-modal .modal-header, .nav-tabs, .prev-next-post a, .related-posts-carousel .carousel-multi-item .carousel-item .col-md-4 img, .reply-form .badge, .sidebar-imgs ul.instagram-photos li, .z-depth-1-half, ul.instagram-photos li img {
+            box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+        }
+        .card.card-cascade.wider .card-body {
+            margin-left: 14%;
+            margin-right: 14%;
+            z-index: 1;
+            background: rgb(255, 255, 255);
+            border-radius: 0px 0px 0.3rem 0.3rem;
+        }
+       .carousel-indicators li  {
+        background-color: #75c1f0;
+        margin:5px;
+                }
+
+        .carousel-indicators .active {
+            background-color: #008FFF;
+        }
+
+       .carousel-indicators {
+        margin-bottom: -2rem;
+        }
+     
+        .product-table img {
+            max-height: 150px;
+            min-width: 50px;
+        }
