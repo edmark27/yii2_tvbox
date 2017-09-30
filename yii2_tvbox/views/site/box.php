@@ -6,6 +6,7 @@
  */
 use yii\helpers\Html;
 use yii\helpers\Url;
+use yii\widgets\ActiveForm;
 
 
 ?>
@@ -186,18 +187,11 @@ use yii\helpers\Url;
                         <!--First review-->
                         <div class="media mb-3">
                             <a class="media-left waves-light">
-                                <img class="rounded-circle" src="img/<?=$rev->user->image?>" alt="аватарка">
+                                <img class="rounded-circle" src="img/<?=$rev->image?>" alt="аватарка">
                             </a>
-                            <div class="media-body">
-                                <h4 class="media-heading"><?=$rev->user->name?></h4>
+                            <div class="media-body m-3">
+                                <h4 class="media-heading"><?=$rev->name?></h4>
                                 <div class="row">
-                                    <div class="col"><ul class="rating inline-ul">
-                                            <li><i class="fa fa-star amber-text"></i></li>
-                                            <li><i class="fa fa-star amber-text"></i></li>
-                                            <li><i class="fa fa-star amber-text"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul></div>
                                     <div class="col text-right"><span><?=$rev->date?></span></div>
                                 </div>
                                 <p><?=$rev->message?></p>
@@ -214,19 +208,7 @@ use yii\helpers\Url;
             <!-- Leave a reply form -->
             <div class="reply-form p-5 white-text">
 
-                <h1 class="text-center">Оставьте отзыв</h1>
-                <p class="text-center">
-                    <!--Grid row-->
-                <div class="row pb-4 d-flex justify-content-center mb-4">
-                    <h4 class="mt-3 mr-4"><strong>Авторизируйтесь с помощью:</strong></h4>
-                    <div class="inline-ul text-center d-flex justify-content-center">
-                        <a class="ic"><i class="fa fa-twitter fa-3x fa-fw"></i></a>
-                        <a class="ic"><i class="fa fa-facebook fa-3x fa-fw"> </i></a>
-                        <a class="ic"><i class="fa fa-vk fa-3x fa-fw"> </i></a>
-                    </div>
-                </div>
-                <!--/Grid row-->
-                </p>
+                <h1 class="text-center mb-5">Оставьте отзыв</h1>
 
                 <!-- Third row -->
                 <div class="row">
@@ -236,26 +218,48 @@ use yii\helpers\Url;
                         <img id="rounded" class="img-fluid" src="img/Anonymus.jpg">
                     </div>
                     <!-- /.Image column -->
+                    <?php if (Yii::$app->session->hasFlash('reviewFormSubmitted')): ?>
 
-                    <!-- Content column -->
-                    <div class="col-sm-10 col-12">
-                        <span>Отметьте рейтинг: </span><ul class="rating inline-ul">
-                            <li><i class="fa fa-star amber-text"></i></li>
-                            <li><i class="fa fa-star amber-text"></i></li>
-                            <li><i class="fa fa-star amber-text"></i></li>
-                            <li><i class="fa fa-star amber-text"></i></li>
-                            <li><i class="fa fa-star amber-text"></i></li>
-                        </ul>
-                        <div class="md-form">
-                            <textarea type="text" id="form8" class="md-textarea white-text"></textarea>
-                            <label class="white-text" for="form8">Ваше сообщение:</label>
+                        <div class="alert alert-success text-center h5 p-5">
+                            Спасибо за оставленный отзыв. Ваше мнение важно.
                         </div>
 
+                    <?php else: ?>
+                    <!-- Content column -->
+                    <div class="col-sm-10 col-12">
+<!--                       <div class="md-form">-->
+<!--                            <textarea type="text" id="form8" class="md-textarea white-text"></textarea>-->
+<!--                            <label class="white-text" for="form8">Ваше сообщение:</label>-->
+<!--                        </div>-->
+<!--                        <div class="col text-center">-->
+<!--                            <button class="btn btn-primary">Отправить</button>-->
+<!--                        </div>-->
+                        <?php $form = ActiveForm::begin(['id' => 'review-form']); ?>
+                        <div class="row">
+
+                            <!-- First column -->
+                            <div class="col-md-6">
+                                <?= $form->field($model, 'name') ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?= $form->field($model, 'email') ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- First column -->
+                            <div class="col-12">
+                                <?= $form->field($model, 'message') ?>
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <?= $form->field($model, 'image')->fileInput(['class' => 'ml-4']) ?>
+                            <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary', 'name' => 'review-button']) ?>
+                        </div>
+
+                        <?php ActiveForm::end(); ?>
                     </div>
 
-                    <div class="col text-center">
-                        <button class="btn btn-primary">Отправить</button>
-                    </div>
+                    <?php endif; ?>
                     <!-- /.Content column -->
 
                 </div>
@@ -266,6 +270,7 @@ use yii\helpers\Url;
 
         </section>
         <!-- /.Section: Leave a reply (Logged In User) -->
+
         <div class="divider-new">
             <h2 class="h2-responsive">Популярные ТВбоксы</h2>
         </div>

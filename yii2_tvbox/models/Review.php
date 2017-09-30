@@ -14,9 +14,6 @@ class Review extends ActiveRecord
     public static function tableName(){
         return 'review';
     }
-    public function getUser(){
-        return $this->hasOne(User::className(),['id' => 'id_user']);
-    }
     public function getTvbox(){
         return $this->hasOne(Tvbox::className(),['id' => 'id_tvbox']);
     }

@@ -32,7 +32,5 @@ class Tvbox extends ActiveRecord
     public function getReview(){
         return $this->hasMany(Review::className(),['id_tvbox' => 'id']);
     }
-    public function getUser(){
-        return $this->hasMany(User::className(), ['id' => 'id_user'])->viaTable('review', ['id_tvbox' => 'id']);
-    }
+
 }

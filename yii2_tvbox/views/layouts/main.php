@@ -24,7 +24,7 @@ AppAsset::register($this);
 <header>
     <nav class="navbar navbar-expand-lg navbar-inverse navbar-dark  fixed-top scrolling-navbar">
         <div class="container">
-            <a class="navbar-brand" href="<?= Url::home()?>">myTVbox</a>
+            <a class="navbar-brand mr-5 btn btn-sm btn-outline-lime" href="<?= Url::home()?>"><span class="h6">myTVbox</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,13 +37,13 @@ AppAsset::register($this);
                         <a class="nav-link color-change" href="<?=Url::to(['site/add']) ?>">Сравнение</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=Url::to(['site/sale']) ?>">Скидки</a>
+                        <a class="nav-link" href="<?=Url::to(['sale/sale']) ?>">Скидки</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=Url::to(['site/seoarticles']) ?>">Статьи</a>
+                        <a class="nav-link" href="<?=Url::to(['articles/seoarticles']) ?>">Статьи</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=Url::to(['site/contact']) ?>">Партнёрам</a>
+                        <a class="nav-link" href="<?=Url::to(['contact/contact']) ?>">Партнёрам</a>
                     </li>
                 </ul>
                 <form class="form-inline" method="get" action="<?= Url::to(['site/search'])?>">
