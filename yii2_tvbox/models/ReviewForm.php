@@ -6,9 +6,7 @@ use Yii;
 
 use yii\db\ActiveRecord;
 
-/**
- * ContactForm is the model behind the contact form.
- */
+
 class ReviewForm extends ActiveRecord
 {
     public static function tableName()

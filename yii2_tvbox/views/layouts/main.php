@@ -46,9 +46,15 @@ AppAsset::register($this);
                         <a class="nav-link" href="<?=Url::to(['contact/contact']) ?>">Партнёрам</a>
                     </li>
                 </ul>
+<?php if(Yii::$app->user->isGuest): ?>
                 <form class="form-inline" method="get" action="<?= Url::to(['site/search'])?>">
                     <input class="form-control mr-sm-2" type="text" placeholder="Поиск" aria-label="Search" name="search">
                 </form>
+<?php endif;?>
+                <?php if(!Yii::$app->user->isGuest): ?>
+                    <div class="navbar-nav"> <a class="nav-link" href="<?= Url::to(['site/logout'])?>">Панель администратора</a></div>
+                    <div class="navbar-nav"> <a class="nav-link" href="<?= Url::to(['site/logout'])?>">Выход</a></div>
+    <?php endif;?>
             </div>
         </div>
     </nav>

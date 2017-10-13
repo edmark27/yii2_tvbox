@@ -35,7 +35,7 @@
          .mbottom {
              margin-bottom: -1rem;
          }
-        #mainContainer {
+        #mainContainer, .login-top {
             margin-top: 6rem;
         }
         .carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
