@@ -8,6 +8,12 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'language' => 'ru-RU',
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+            'layout' => 'admin',
+        ],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -51,8 +57,8 @@ $config = [
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
 
-                '/admin/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-                '/admin/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>'
+//                '/admin/<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+//                '/admin/<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>'
 
 
             ],

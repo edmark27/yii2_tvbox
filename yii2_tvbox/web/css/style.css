@@ -119,3 +119,9 @@
         .color-link{
             color: red !important;
         }
+
+        .active{
+             border-bottom: 1px solid white !important;
+             border-top: 1px solid white !important;
+
+         }

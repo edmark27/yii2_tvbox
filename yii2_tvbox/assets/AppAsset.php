@@ -19,6 +19,7 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/font-awesome.min.css',
+        'css/bootstrap3.css',
         'css/bootstrap.min.css',
         'css/mdb.min.css',
         'css/style.css',
@@ -31,7 +32,7 @@ class AppAsset extends AssetBundle
         'js/main.js',
     ];
     public $depends = [
-       // 'yii\web\YiiAsset',
-       // 'yii\bootstrap\BootstrapAsset',
+//        'yii\web\YiiAsset',
+//        'yii\bootstrap\BootstrapAsset',
     ];
 }

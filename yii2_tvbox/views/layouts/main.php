@@ -52,8 +52,9 @@ AppAsset::register($this);
                 </form>
 <?php endif;?>
                 <?php if(!Yii::$app->user->isGuest): ?>
-                    <div class="navbar-nav"> <a class="nav-link" href="<?= Url::to(['site/logout'])?>">Панель администратора</a></div>
-                    <div class="navbar-nav"> <a class="nav-link" href="<?= Url::to(['site/logout'])?>">Выход</a></div>
+                    <div class="navbar-nav"> <a class="nav-link" href="<?= Url::to(['/admin/sale/create'])?>">Добавить акцию</a></div>
+                    <div class="navbar-nav"> <a class="nav-link" href="<?= Url::to(['/admin/review'])?>">Управление комментариями</a></div>
+                    <div class="navbar-nav"> <a class="nav-link" href="<?= Url::to(['/site/logout'])?>">Выход</a></div>
     <?php endif;?>
             </div>
         </div>
